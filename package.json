@@ -9,15 +9,21 @@
     "watch": "nodemon server.js",
     "seed": "node seeders/seed.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/LukeSpang/Workout-Tracker.git"
-  },
   "author": "Luke",
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
     "mongoose": "^5.3.16",
     "morgan": "^1.10.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LukeSpang/Workout-Tracker.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/LukeSpang/Workout-Tracker/issues"
+  },
+  "homepage": "https://github.com/LukeSpang/Workout-Tracker#readme"
+  
 }
