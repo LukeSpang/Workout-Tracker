@@ -1,9 +1,9 @@
 const express = require("express");
 // const logger = require("morgan");
 const mongoose = require("mongoose");
-const router = require("./routes/api.js")
+// const router = require("./routes/api.js")
 
-const PORT = process.env.PORT || 3333;
+const PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -14,12 +14,12 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-let db = mongoose.connect(
-    process.env.MONGODB_URI || "mongodb://localhost/fitnesstrackerDB",{
-        useUnifiedTopology: true,
+mongoose.connect(
+    process.env.MONGODB_URI || "mongodb://localhost/workout",{
         useNewUrlParser: true,
-        useFindAndModify: false,
+        useUnifiedTopology: true,
         useCreateIndex: true,
+        useFindAndModify: false
     }
 );
 //////routes
@@ -30,5 +30,5 @@ app.listen(PORT, ()=>{
     console.log(`listening on port ${PORT}`);
 });
 
-module.exports = db;
+
 
