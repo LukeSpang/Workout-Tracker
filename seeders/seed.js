@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const db = require('../models');
 
 mongoose.connect(
-  "mongodb+srv://Luke:Volleyball20@cluster0.lozhq.mongodb.net/workout?retryWrites=true&w=majority" || "mongodb://localhost/workout", 
+  process.env.MONGODB_URI || "mongodb+srv://Luke:Volleyball20@cluster0.lozhq.mongodb.net/workout?retryWrites=true&w=majority" || "mongodb://localhost/workout", 
   { 
       useNewUrlParser: true, 
       useUnifiedTopology: true,
